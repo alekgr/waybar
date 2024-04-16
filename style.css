@@ -14,13 +14,14 @@ window#waybar {
 
 tooltip {
   /*background: rgba(43, 48, 59, 0.5);*/
-  background:gray;
+  background:#1E3777;
+
   /*border: 1px solid rgba(100, 114, 125, 0.5);*/
   border: none;
 }
 
 tooltip label {
-  color: black;
+  color: #0A0E12;
 }
 
 #workspaces button {
