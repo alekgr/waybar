@@ -180,7 +180,7 @@
 		"format": "{}",
 		"tooltip": true,
 		"interval": 900,
-		"exec": "wttrbar --ampm --fahrenheit --location fort+worth --custom-indicator '{ICON}{temp_F}({FeelsLikeF})'",
+		"exec": "wttrbar --ampm -m --fahrenheit --location fort+worth --custom-indicator '{ICON}{temp_F}({FeelsLikeF})'",
 		"return-type": "json"
 	},
 
