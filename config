@@ -61,6 +61,7 @@
 			"kitty-dropterm",
 			"kitty-ncmpcpp",
 			"neomutt1",
+			"pavucontrol",
 		],
 		"rewrite": {
 			"Firefox Web Browser": "Firefox",
@@ -241,13 +242,20 @@
 	"height": 30,
 	//"modules-left":,
 	//"modules-center": ["pulseaudio", "keyboard-state", "backlight"],
-	"modules-right": ["custom/hyprland", "group/group-power", "cpu", "memory", "disk", "disk#home", "disk#tmp", "network", "battery", "custom/weather", "clock"],
+	"modules-right": ["custom/hyprland", "custom/hyprland-logs", "group/group-power", "cpu", "memory", "disk", "disk#home", "disk#tmp", "network", "battery", "custom/weather", "clock"],
 	
 	"custom/hyprland": {
 		"format": "reload {}",
 		"return-type": "json",
 		"on-click": "bash notify-send reloaded hyprland "
 	},
+
+	
+
+	"custom/hyprland-logs": {
+		"format": "<b>hyprland logs</b> {}",
+		"on-click": "kitty tail -f  $XDG_RUNTIME_DIR/hypr/$(ls -t $XDG_RUNTIME_DIR/hypr/ | head -n 1)/hyprland.log"
+	}
 	
 
 }]
