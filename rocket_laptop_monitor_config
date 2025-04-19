@@ -65,7 +65,8 @@
 			"ranger",
 		],
 		"rewrite": {
-			"Firefox Web Browser": "Firefox",
+			"(\\s*)kitty-nvim": "Nvim",
+			"(\\s*)kitty-weechat": "Weechat"
 		}
 
 	},
