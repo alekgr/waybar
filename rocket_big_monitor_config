@@ -60,6 +60,7 @@
 		"ignore-list": [
 			"kitty-dropterm",
 			"kitty-ncmpcpp",
+			"kitty-cmus",
 			"neomutt1",
 			"pavucontrol",
 			"ranger",
