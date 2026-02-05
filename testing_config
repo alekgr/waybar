@@ -192,7 +192,7 @@
 	},
 
 	"cpu": {
-		"format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7} {usage:>2}  ",
+		"format": "{icon0}{icon1}{icon2}{icon3} {usage:>2}  ",
 		"format-icons":["▁","▂","▃","▄","▅","▆","▇","█"],
 		"interval": 1,
 		"tooltip": "false",
