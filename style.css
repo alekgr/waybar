@@ -126,7 +126,7 @@ tooltip label {
     border-bottom: 3px solid white;
 }
 
-#clock {
+#clock, #custom-weather {
     /*background-color: #006666;*/
     color: #ffffff;
 }
