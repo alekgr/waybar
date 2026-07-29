@@ -114,10 +114,10 @@
 			"default": [" "]
 		},
 		"tooltip": true,
-		"on-click": "amixer set Master toggle",
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 		"on-click-right": "pavucontrol",
-		"on-scroll-up": "amixer set Master 10%+",
-		"on-scroll-down": "amixer set Master 10%-"
+		"on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
+		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
 	},
 
 
