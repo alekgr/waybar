@@ -244,7 +244,7 @@
 	"height": 30,
 	//"modules-left":,
 	//"modules-center": ["pulseaudio", "keyboard-state", "backlight"],
-	"modules-right": ["custom/hyprland", "custom/hyprland-logs", "group/group-power", "cpu", "memory", "disk", "disk#home", "disk#tmp", "network", "battery", "custom/weather", "clock"],
+	"modules-right": ["custom/hyprland", "custom/hyprland-logs"],
 	
 	"custom/hyprland": {
 		"format": "reload {}",
