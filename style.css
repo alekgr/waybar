@@ -200,9 +200,33 @@ tooltip label {
 #keyboard-state,
 #backlight,
 #bluetooth,
+#custom-escape,
 #mpris
 {
 	background: transparent;
 	border: 4px solid rgba(31,47,90,0.9); 
 	padding: 0 10px;
+}
+
+/* Base module container — locked dimensions */
+#custom-escape {
+    padding: 0 8px;
+    margin: 2px 4px;
+    background-color: transparent;
+    font-weight: normal;
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+/* Unlocked state */
+#custom-escape.unlocked {
+    color: rgba(52,246,90,0.9);
+    background-color: transparent;
+}
+
+/* Locked state — keeps exact same padding and weight to prevent resize */
+#custom-escape.locked {
+    background-color: transparent;
+    color: dodgerblue;
+    border-radius: 4px;
+    /* padding remains 0 8px from #custom-escape base */
 }

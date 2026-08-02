@@ -5,7 +5,7 @@
 	"height": 37,
 	"spacing": 10,
 	"modules-left": ["hyprland/workspaces", "custom/pacman", "wlr/taskbar"],
-	"modules-center": ["pulseaudio", "keyboard-state", "backlight", "bluetooth", "mpris"],
+	"modules-center": ["pulseaudio", "custom/escape", "backlight", "bluetooth", "mpris"],
 	"modules-right": ["group/group-power", "cpu", "memory", "disk", "disk#home", "disk#tmp", "network", "battery", "custom/weather", "clock"],
 
 	"hyprland/window": {
@@ -84,17 +84,11 @@
 		"format-icons": ["","","","",""]
 	},
 
-	"keyboard-state": 
-		{
-			"numlock": false,
-			"capslock": true,
-			"binding-keys": [1, 69, 70],
-			"format": "{name} {icon}",
-			"format-icons": {
-			"locked": "",
-			"unlocked": ""
-		}
-
+	"custom/escape": {
+    		"format": "{}",
+		"return-type": "json",
+    		"exec": "~/.config/waybar/scripts/escape_status.sh",
+		"tooltip": false
 	},
 
 		
@@ -243,7 +237,7 @@
 },
 
 {
-	"output": "HDMI-A-1",
+	"output": "HDMI-A-2",
 	"layer": "top",
 	"position": "bottom",
 	"margin": "0px 0px 0px 0px",
