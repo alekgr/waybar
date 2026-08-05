@@ -62,8 +62,8 @@
 			"kitty-ncmpcpp",
 			"kitty-cmus",
 			"neomutt1",
-			"pavucontrol",
-			"ranger",
+			"org.pulseaudio.pavucontrol",
+			"kitty-yazi",
 		],
 		"rewrite": {
 			"(\\s*)kitty-nvim": "Nvim",
