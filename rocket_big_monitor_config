@@ -244,20 +244,31 @@
 	"height": 30,
 	//"modules-left":,
 	//"modules-center": ["pulseaudio", "keyboard-state", "backlight"],
-	"modules-right": ["custom/hyprland", "custom/hyprland-logs"],
+	"modules-right": ["custom/hyprland-reload", "custom/waybar-reload", "custom/pyprland-logs", "custom/hyprland-logs"],
 	
-	"custom/hyprland": {
-		"format": "reload {}",
+	"custom/hyprland-reload": {
+		"format": "hyprland reload {} | ",
 		"return-type": "json",
-		"on-click": "bash notify-send reloaded hyprland "
+		"on-click": "hyprctl reload && notify-send 'reloaded hyprland' "
 	},
 
+	"custom/waybar-reload": {
+		"format": "waybar reload {} | ",
+		"return-type": "json",
+		"on-click": "pkill -SIGUSR2 waybar && notify-send 'reloaded waybar' "
+	},
 	
 
 	"custom/hyprland-logs": {
-		"format": "<b>hyprland logs</b> {}",
+		"format": "<b>hyprland logs</b>  {}",
 		"on-click": "kitty tail -f  $XDG_RUNTIME_DIR/hypr/$(ls -t $XDG_RUNTIME_DIR/hypr/ | head -n 1)/hyprland.log"
+	},
+
+	"custom/pyprland-logs": {
+		"format": "<b>pyprland logs</b> |  {}",
+		"on-click": "kitty tail -f  /tmp/pypr.log"
 	}
+
 	
 
 }]

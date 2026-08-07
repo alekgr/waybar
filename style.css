@@ -179,6 +179,7 @@ tooltip label {
     animation-direction: alternate;
 }
 
+
 #custom-gmail.unread {
     color: white;
 
@@ -229,4 +230,73 @@ tooltip label {
     color: dodgerblue;
     border-radius: 4px;
     /* padding remains 0 8px from #custom-escape base */
+}
+
+/* Base style - target module, label, and inner widgets */
+#custom-pyprland-logs,
+#custom-pyprland-logs label {
+    background-color: transparent;
+    color: #778899;
+    transition: background-color 1.0s ease-out, color 1.0s ease-out;
+}
+
+/* Active style - force hover/click pass-through */
+#custom-pyprland-logs:hover,
+#custom-pyprland-logs:active,
+#custom-pyprland-logs:active label {
+    background-image: none;
+    background-color: transparent;
+    color: lightgreen;
+    transition: background-color 0s, color 0s;
+}
+
+#custom-hyprland-logs,
+#custom-hyprland-logs label {
+    background-color: transparent;
+    color: #778899;
+    transition: background-color 1.0s ease-out, color 1.0s ease-out;
+}
+
+/* Active style - force hover/click pass-through */
+#custom-hyprland-logs:hover,
+#custom-hyprland-logs:active,
+#custom-hyprland-logs:active label {
+    background-image: none;
+    background-color: transparent;
+    color: lightgreen;
+    transition: background-color 0s, color 0s;
+}
+
+#custom-hyprland-reload,
+#custom-hyprland-reload label {
+    background-color: transparent;
+    color: #778899;
+    transition: background-color 1.0s ease-out, color 1.0s ease-out;
+}
+
+/* Active style - force hover/click pass-through */
+#custom-hyprland-reload:hover,
+#custom-hyprland-reload:active,
+#custom-hyprland-reload:active label {
+    background-image: none;
+    background-color: transparent;
+    color: lightgreen;
+    transition: background-color 0s, color 0s;
+}
+
+#custom-waybar-reload,
+#custom-waybar-reload label {
+    background-color: transparent;
+    color: #778899;
+    transition: background-color 1.0s ease-out, color 1.0s ease-out;
+}
+
+/* Active style - force hover/click pass-through */
+#custom-waybar-reload:hover,
+#custom-waybar-reload:active,
+#custom-waybar-reload:active label {
+    background-image: none;
+    background-color: transparent;
+    color: lightgreen;
+    transition: background-color 0s, color 0s;
 }
