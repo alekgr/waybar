@@ -228,7 +228,7 @@ tooltip label {
 #custom-escape.locked {
     background-color: transparent;
     color: dodgerblue;
-    border-radius: 4px;
+    border-radius: 15px;
     /* padding remains 0 8px from #custom-escape base */
 }
 
