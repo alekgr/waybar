@@ -6,7 +6,7 @@
 	"spacing": 10,
 	"modules-left": ["hyprland/workspaces", "custom/pacman", "wlr/taskbar"],
 	"modules-center": ["pulseaudio", "custom/escape", "backlight", "bluetooth", "mpris"],
-	"modules-right": ["group/group-power", "cpu", "memory", "disk", "disk#home", "disk#tmp", "network", "battery", "custom/weather", "clock"],
+	"modules-right": ["group/group-power", "cpu", "memory", "disk", "disk#home", "disk#tmp", "network", "battery", "custom/weather", "custom/clock"],
 
 	"hyprland/window": {
 		"seperate-outputs": true
@@ -149,33 +149,12 @@
 		"spacing": 10,
 		},
 
-	"clock": {
-		"format": "{:%H:%M:%S} ",
-		"format-alt": "{:%A, %B %d, %Y (%R)} ",
-		"tooltip": true,
-		"tooltip-format": "{:%Y-%m-%d}",
-		"interval":1,
-		"calendar": {
-			"mode": "year",
-			"mode-mon-col": 3,
-			"weeks-pos": "right",
-			"on-scroll": 1,
-			"on-click-right": "mode",
-			"format": {
-				"months":   "<span color='#ffead3'></b></span>",
-				"days":     "<span color='#ecc6d9'></b></span>",
-				"weeks":    "<span color='#99fdd'></b></span>",
-				"weekdays": "<span color='#ffcc66'></b></span>",
-				"today":    "<span color='#ff6699'></b></span>",
-			}
-		},
-		"actions": {
-			"on-click-right": "mode",
-			"on-click-forward":"tz_up",
-			"on-click-backward":"tz_down",
-			"on-scroll-up":"shift_up",
-			"on-scroll-down":"shift_down"
-			}
+	"custom/clock": {
+    	"format": "{}",
+    	"interval": 1,
+    	"return-type": "json",
+    	"exec": "jq -n -c --arg text \"$(date +'%H:%M:%S ')\" --arg tooltip \"$(khal list now 7d)\" '{\"text\": $text, \"tooltip\": $tooltip}'",
+	"on-click": "kitty --class khal_calendar -e python /home/alek/.local/bin/ikhal-transparent"
 	},
 
 	"custom/weather": {

@@ -117,8 +117,16 @@ tooltip label {
     background-color: green;	
 }
 
-#mode, #clock, #battery, #cpu {
+#mode, #battery, #cpu {
     padding: 0 10px;
+}
+
+#custom-clock {
+    background-color: rgba(30, 30, 46, 0.50); /* 50% transparent module pill */
+    color: #cdd6f4;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin: 3px 0;
 }
 
 #mode {
