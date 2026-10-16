@@ -212,7 +212,8 @@ tooltip label {
 #mpris
 {
 	background: transparent;
-	border: 4px solid rgba(31,47,90,0.9); 
+	/*border: 4px solid rgba(31,47,90,0.9); */
+	border:  none;
 	padding: 0 10px;
 }
 
