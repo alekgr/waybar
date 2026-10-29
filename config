@@ -194,7 +194,7 @@
 
 	"pulseaudio": {
             	"format": "{volume}% {icon}",
-            	"format-muted": "",
+            	"format-muted":"",
             	"format-icons": { "default": [" "] },
             	"tooltip": true,
             	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
