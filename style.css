@@ -1,0 +1,206 @@
+* {
+	border-radius:15px;
+	font-size: 16px;
+	min-height: 0;
+}
+
+window#waybar {
+	/* background: rgba(43, 48, 59, 0.5); */
+	/* background: #222222; */
+	background: transparent;
+	border: 3px;
+}
+
+tooltip {
+	background: #1E3777;
+	border: none;
+}
+
+
+#taskbar * {
+	background: #222222;
+}
+
+#workspaces button {
+	background: #222222;
+	color: #555555;
+}
+
+#workspaces button.active {
+	color: #ffffff;
+}
+
+
+
+
+/* 2. Pulseaudio is the last item, so it doesn't need a right margin */
+#pulseaudio {
+    padding-left:  15px;
+    padding-right: 15px;
+    margin-right: 0;
+    background: #222222;
+    min-width: 85px;
+}
+
+#pulseaudio.muted {
+    color: #888888;
+    background: #1a1a1a;
+}
+
+
+#custom-escape, 
+#bluetooth, 
+#pulseaudio {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 10px;
+    background: #222222;
+}
+
+#mpris {
+    background-color: transparent;
+    color: transparent;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+}
+
+/* 2. When a player IS active and playing/paused, restore its normal styling */
+#mpris.playing,
+#mpris.paused {
+    background-color: #222222;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 15px;
+    margin-right: 10px;
+    opacity: 1;
+    color: #ffffff; /* or your preferred text color */
+}
+
+/* 3. Explicitly keep it collapsed for all inactive states */
+#mpris.empty, 
+#mpris.stopped,
+#mpris.disconnected {
+    background-color: transparent;
+    color: transparent;
+    font-size: 0px;
+    padding: 0px;
+    margin: 0px; 
+    border: none;
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+}
+
+#mpris.empty *,
+#mpris.stopped *,
+#mpris.disconnected * {
+    padding: 0px;
+    margin: 0px;
+    font-size: 0px;
+    min-width: 0px;
+    min-height: 0px;
+}
+
+#custom-escape {
+    color: rgba(52,246,90,0.9);
+}
+
+
+#custom-escape.locked,
+#custom-escape.capslock
+{
+    color: red;
+}
+
+
+#cpu {
+    padding-left:  15px;
+    padding-right: 15px; 
+    margin-right: 0;
+    background: #222222;
+    min-width: 85px;
+}
+
+#memory {
+    padding-left:  15px;
+    padding-right: 15px;
+    margin-right: 0;
+    background: #222222;
+    min-width: 95px;
+}
+
+#disk {
+    padding-left:  15px;
+    padding-right: 15px;
+    margin-right: 0;
+    background: #222222;
+    min-width: 95px;
+}
+
+#disk#home {
+    padding-left:  15px;
+    padding-right: 15px;
+    margin-right: 0;
+    background: #222222;
+    min-width: 95px;
+}
+
+
+#network {
+    padding-left:  15px;
+    padding-right: 15px;
+    margin-right: 0;
+    background: #222222;
+    min-width: 95px;
+}
+
+#battery {
+    padding-left:  5px;
+    padding-right: 5px;
+    margin-right: 0;
+    background: #222222;
+    min-width: 95px;
+    color: yellow;
+}
+
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+#custom-weather {
+    padding-left:  5px;
+    padding-right: 5px;
+    margin-right: 0;
+    background: #222222;
+    min-width: 95px;
+}
+
+#custom-pacman {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction:alternate;
+	color:yellow
+}
+
+#custom-pacman.pending-updates {
+	animation-name: blink-update;
+	animation-duration: 3s;
+	color: #BC88B0;
+}
