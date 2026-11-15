@@ -44,15 +44,7 @@
 			"all-outputs": false
 		},
 		"tray": { "icon-size": 21, "spacing": 10 },
-		// "custom/pacman": {
-		// 	"format": "{icon} {0} updates",
-		// 	"return-type": "json",
-		// 	"format-icons": { "pending-updates":"", "updated": "" },
-		// 	"exec-if": "which waybar-updates",
-		// 	"exec": "waybar-updates",
-		// 	"on-click": "alacritty -e sudo pacman -Syu"
-		// },
-		"wlr/taskbar": {
+				"wlr/taskbar": {
 			"all-outputs": false,
 			"spacing": 5,
 			"format": "{icon} {app_id}",
@@ -73,7 +65,6 @@
 		},
 
 		"bluetooth": { 
-				"controller": "00:91:9E:9C:1A:75", 
 				"format": " {status}", 
 				"format-connected": " {device_alias}", 
 				"format-disabled": "", 
@@ -86,20 +77,6 @@
 				"format-icons": ["",""], 
 				"on-click": "brightnessctl set 10%-", 
 				"on-click-right": "brightnessctl set 10%+" 
-		},
-
-		"mpris": {
-				"format": "{player_icon} {dynamic}", 
-				"format-paused": "{status_icon}  {dynamic}", 
-				"format-playing": "{status_icon}  {dynamic}",
-				"format-disconnected": "",
-				"format-stopped": "", 
-				"interval": 1, 
-				"player-icons": 
-					{ "default": "▶", "mpv": "🎵" }, 
-				"status-icons": 
-					{ "paused": "⏸", "playing": "▶" }, 
-				"max-length": 50
 		},
 
 		"pulseaudio": {
@@ -143,6 +120,23 @@
 		"custom/waybar-reload": { "format": "waybar reload {} | ", "return-type": "json", "on-click": "pkill -SIGUSR2 waybar && notify-send 'reloaded waybar' " },
 		"custom/hyprland-logs": { "format": "<b>hyprland logs</b>  {}", "on-click": "kitty tail -f  $XDG_RUNTIME_DIR/hypr/$(ls -t $XDG_RUNTIME_DIR/hypr/ | head -n 1)/hyprland.log" },
 		"custom/pyprland-logs": { "format": "<b>pyprland logs</b> |  {}", "on-click": "kitty tail -f  /tmp/pypr.log" },
+
+		"mpris": {
+				"format": "{player_icon} - {title}", 
+				"format-paused": "", 
+				"format-playing": "{status_icon} {title}",
+				"format-disconnected": "{status_icon} {dynamic}",
+				"format-stopped": "", 
+				"hide-on-paused": true,
+				"ignored-players": "cmus",
+				"interval": 1, 
+				"player-icons": 
+					{ "default": "▶", "mpv": "🎵" }, 
+				"status-icons": 
+					{ "paused": "⏸", "playing": "▶" }, 
+				"max-length": 40
+		},
+
 
 		"custom/pacman": {
 				"format": "{icon} {0} updates",
@@ -232,7 +226,6 @@
 		},
 
 		"bluetooth": { 
-				"controller": "00:91:9E:9C:1A:75", 
 				"format": " {status}", 
 				"format-connected": " {device_alias}", 
 				"format-disabled": "", 
@@ -245,20 +238,6 @@
 				"format-icons": ["",""], 
 				"on-click": "brightnessctl set 10%-", 
 				"on-click-right": "brightnessctl set 10%+" 
-		},
-
-		"mpris": {
-				"format": "{player_icon} - {title}", 
-				"format-paused": "{status_icon} {title}", 
-				"format-playing": "{status_icon} {title}",
-				"format-disconnected": "",
-				"format-stopped": "", 
-				"interval": 1, 
-				"player-icons": 
-					{ "default": "▶", "mpv": "🎵" }, 
-				"status-icons": 
-					{ "paused": "⏸", "playing": "▶" }, 
-				"max-length": 25
 		},
 
 		"pulseaudio": {
@@ -310,7 +289,21 @@
 				"exec-if": "which waybar-updates",
 				"exec": "waybar-updates",
 				"on-click": "alacritty -e sudo pacman -Syu"
-		}
+		},
+
+		"mpris": {
+						"format": "{player_icon} - {title}", 
+						"format-paused": "{status_icon} {title}", 
+						"format-playing": "{status_icon} {title}",
+						"format-disconnected": "",
+						"format-stopped": "", 
+						"interval": 1, 
+						"player-icons": 
+							{ "default": "▶", "mpv": "🎵" }, 
+						"status-icons": 
+							{ "paused": "⏸", "playing": "▶" }, 
+						"max-length": 40
+				}
 
 
 
