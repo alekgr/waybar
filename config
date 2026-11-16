@@ -6,7 +6,7 @@
 		"height": 37,
 		"spacing": 10,
 		"modules-left": ["hyprland/workspaces", "wlr/taskbar"],
-		"modules-center": ["custom/escape", "backlight", "bluetooth", "pulseaudio"],
+		"modules-center": ["custom/clock", "backlight", "bluetooth", "pulseaudio"],
 		"modules-right": ["cpu","memory", "disk","disk#home", "network", "battery", "custom/weather"],
 		
 		
@@ -63,6 +63,13 @@
 		"tooltip": false 
 	
 		},
+        
+		"custom/clock": {
+            		"format": "{}", "interval": 1, "return-type": "json",
+            		"exec": "jq -n -c --arg text \"$(date +'%H:%M:%S ')\" --arg tooltip \"$(khal list now 7d)\" '{\"text\": $text, \"tooltip\": $tooltip}'",
+            		"on-click": "kitty --class khal_calendar -e python /home/alek/.local/bin/ikhal-transparent"
+        	},
+
 
 		"bluetooth": { 
 				"format": " {status}", 
@@ -158,7 +165,7 @@
 		"height": 37,
 		"spacing": 10,
 		"modules-left": ["hyprland/workspaces", "wlr/taskbar"],
-		"modules-center": ["backlight", "bluetooth","pulseaudio"],
+		"modules-center": ["custom/clock", "backlight", "bluetooth","pulseaudio"],
 		"modules-right": ["cpu","memory", "network", "battery"],
 		
 		
@@ -222,8 +229,15 @@
 		"return-type": "json", 
 		"exec": "~/.config/waybar/scripts/escape_status.sh", 
 		"tooltip": false 
-	
 		},
+
+		"custom/clock": {
+            		"format": "{}", "interval": 1, "return-type": "json",
+            		"exec": "jq -n -c --arg text \"$(date +'%H:%M:%S ')\" --arg tooltip \"$(khal list now 7d)\" '{\"text\": $text, \"tooltip\": $tooltip}'",
+            		"on-click": "kitty --class khal_calendar -e python /home/alek/.local/bin/ikhal-transparent"
+        	},
+
+
 
 		"bluetooth": { 
 				"format": " {status}", 
