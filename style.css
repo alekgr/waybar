@@ -1,5 +1,6 @@
 * {
 	border-radius:15px;
+	font-family: "Roboto", "Font Awesome 5 Free", "Symbols Nerd Font", monospace;
 	font-size: 16px;
 	min-height: 0;
 }
@@ -35,8 +36,8 @@ tooltip {
 
 /* 2. Pulseaudio is the last item, so it doesn't need a right margin */
 #pulseaudio {
-    padding-left:  15px;
-    padding-right: 15px;
+    padding-left:  13px;
+    padding-right: 13px;
     margin-right: 0;
     background: #222222;
     min-width: 85px;
@@ -51,8 +52,8 @@ tooltip {
 #custom-escape, 
 #bluetooth, 
 #pulseaudio {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-right: 10px;
     background: #222222;
 }
@@ -110,6 +111,14 @@ tooltip {
     color: rgba(52,246,90,0.9);
 }
 
+#custom-clock {
+	min-width: 85px;
+	padding-left: 15px;
+	padding-right: 15px;
+	color: #ffffff;
+	background: #1a1a1a;
+
+}
 
 #custom-escape.locked,
 #custom-escape.capslock
@@ -200,8 +209,14 @@ tooltip {
 	color:yellow
 }
 
+@keyframes blink-updates {
+    to {
+        background-color: dodgerblue;
+    }
+}
+
 #custom-pacman.pending-updates {
-	animation-name: blink-update;
+	animation-name: blink-updates;
 	animation-duration: 3s;
 	color: #BC88B0;
 }
