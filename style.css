@@ -36,11 +36,11 @@ tooltip {
 
 /* 2. Pulseaudio is the last item, so it doesn't need a right margin */
 #pulseaudio {
-    padding-left:  13px;
-    padding-right: 13px;
+    padding-left:  8px;
+    padding-right: 8px;
     margin-right: 0;
     background: #222222;
-    min-width: 85px;
+    min-width: 75px;
 }
 
 #pulseaudio.muted {
@@ -128,8 +128,8 @@ tooltip {
 
 
 #cpu {
-    padding-left:  15px;
-    padding-right: 15px; 
+    padding-left:  10px;
+    padding-right: 10px; 
     margin-right: 0;
     background: #222222;
     min-width: 85px;
