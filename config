@@ -65,7 +65,7 @@
 		},
         
 		"custom/clock": {
-            		"format": "{}", "interval": 1, "return-type": "json",
+            		"format": "{}", "interval": 0.5, "return-type": "json",
             		"exec": "jq -n -c --arg text \"$(date +'%H:%M:%S ')\" --arg tooltip \"$(khal list now 7d)\" '{\"text\": $text, \"tooltip\": $tooltip}'",
             		"on-click": "kitty --class khal_calendar -e python /home/alek/.local/bin/ikhal-transparent"
         	},
@@ -232,7 +232,7 @@
 		},
 
 		"custom/clock": {
-            		"format": "{}", "interval": 1, "return-type": "json",
+            		"format": "{}", "interval": 0.5, "return-type": "json",
             		"exec": "jq -n -c --arg text \"$(date +'%H:%M:%S ')\" --arg tooltip \"$(khal list now 7d)\" '{\"text\": $text, \"tooltip\": $tooltip}'",
             		"on-click": "kitty --class khal_calendar -e python /home/alek/.local/bin/ikhal-transparent"
         	},
